@@ -2,6 +2,12 @@
 
 Portainer CE allows you to deploy and manage apps in Azure Container Instances quickly and easily and like no other tool. There is no need to type commands via CLI or go to the Azure Portal to manage your containers; Portainer does it all. Simply deploy Portainer in an Azure container and manage it like any other node.
 
+## Constraints
+
+The following scenarios are not supported
+* ACI Persistent storage
+* Private networks
+
 ## Requirements
 
 Before connecting to your Azure Subscription, you need to create an Azure AD Application. For more information see the [Microsoft Documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
@@ -29,6 +35,7 @@ Is everything works as expected, you will the following pop up
 
 ![aci](assets/aci_3.png)
 
-## Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+## :material-note-text: Notes
+
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

@@ -21,41 +21,47 @@ If you want to make a storage class the default, you can type the command:
 
 and replace <storage-class-name> with the name of your storage class (eg: kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 
-Alternatively, if you are using HELM you can use: 
+Alternatively, if you are using HELM you can use:
 <pre><code> --set persistence.storageClass=<storage-class-name> </code></pre>
 
 ### Using Helm
+
+Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
+
 
 First, add the Portainer helm repo running the following:
 
 <pre><code> helm repo add portainer https://portainer.github.io/k8s/</code></pre>
 <pre><code> helm repo update</code></pre>
 
-Then, create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<!-- Then, create the Portainer namespace in your cluster
+
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
 Using the following command, Portainer will run in the port 30777
 
-<pre><code> helm install -n portainer portainer portainer/portainer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer</code></pre>
 
 #### For Load Balancer
 
 Using the following command, Portainer will run in the port 9000.
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=LoadBalancer</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set service.type=LoadBalancer</code></pre>
 
 #### For Ingress
 
-<pre><code> helm install -n portainer portainer portainer/portainer --set service.type=ClusterIP</code></pre>
+<pre><code> helm install --create-namespace -n portainer portainer portainer/portainer \
+--set service.type=ClusterIP</code></pre>
 
 ### Using YAML Manifest
 
-First create the Portainer namespace in your cluster
+<!-- First create the Portainer namespace in your cluster
 
-<pre><code> kubectl create namespace portainer</code></pre>
+<pre><code> kubectl create namespace portainer</code></pre> -->
 
 #### For NodePort
 
@@ -67,13 +73,38 @@ Using the following command, Portainer will run in the port 30777
 
 <pre><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-lb.yaml</code></pre>
 
+---
+**Note about Persisting Data**
+
+The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.
+
+In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
+
+While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.
+
+The nodeSelector can be added in the following ways:
+
+1. Edit your own values.yaml and set the value of nodeSelector like this:
+
+        nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
+
+2. Explicictly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
+   
+3. If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
+
+        kubectl patch deployments -n portainer portainer -p '{"spec": {"template": {"spec": {"nodeSelector": {"kubernetes.io/hostname": "'$(kubectl get pods -n portainer -o jsonpath='{ ..nodeName }')'"}}}}}' || (echo Failed to identify current node of portainer pod; exit 1)
+
+---
+
 ## Deploy Portainer in Docker
 
 Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
 Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
 
-To see the requeriments, please, visit the page of [requirements](/v2.0/deploy/requeriments.md)
+By default, Portainer will expose the UI over the port 9000 and expose a TCP tunnel server over the port 8000. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+
+To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements).
 
 ### Docker Standalone
 
@@ -99,7 +130,7 @@ Run the following command to deploy the Agent in your Docker host.
 
 <pre><code>docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent</code></pre>
 
-Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
+Note: <code>--tlsskipverify</code> has to be present when deploying an agent, since injecting valid, signed certs in the agent is not a supported scenario at present.
 
 ### Docker Swarm
 Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.
@@ -114,6 +145,6 @@ The following step is deploy the Agent:
 
 Note: <code>--tlsskipverify</code> has to be present when deploy an agent and the certs in the agent is not a supported scenario at this moment.
 
-## Notes
+## :material-note-text: Notes
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

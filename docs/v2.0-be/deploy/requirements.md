@@ -1,31 +1,25 @@
 # Requirements
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine.
 
-In this article, you will find information about the supported platforms and Docker versions.
+By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
-## Supported Platforms
 
-Portainer can be deployed on the following platforms:
+Every single release of Portainer goes through an extensive testing process (functional tests, release tests, post release tests) to ensure that what we are creating actually works as expected. Obviously though, we cannot possibly test Portainer against every single configuration variant out there, so we have elected to test against just a subset.
 
-- Linux AMD64
-- Linux ARM64
-- Windows AMD64
+To try and alleviate confusion as to what we test against, we have documented the configurations that we personally validate as "functional"; any other variant is not tested (this does not mean it wont work, it just means its not tested). 
 
-## Supported Docker Versions
+## Validated Configurations
 
-The required Docker version to have full support is 19.01 or the newest. Docker 19 is partially supported. Older versions than indicated here, are not supported.
+| Portainer Version     | Release Date | Docker Version | Kubernetes Version    | Architectures | Operating Systems                                                                            |
+|-----------------------|--------------|----------------|-----------------------|---------------|----------------------------------------------------------------------------------------------|
+| Business 2.0 (latest) | Dec 3, 2020  | 19.03.13       | 1.17.13 1.18.6 1.19.3 | ARM64, x86_64 | Windows 10 (version 1809) + WSL2, Windows Server 2019 (version 1809) + Windows Containers, Ubuntu 18.04 LTS, Ubuntu 20.04.1* |
 
-## Supported Docker Swarm
+*For Docker and K8s on ARM64.
 
-Docker Swarm Standalone (old Swarm binary, deprecated in 2018) isn't supported.
+## :material-note-text: Notes
 
-## Supported Kubernetes versions
+If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
 
-The following versions of Kubernetes are fully supported:
+Business Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0/deploy/requirements/)
 
-- 1.17
-- 1.18
-- 1.19
-
-## Notes
-
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

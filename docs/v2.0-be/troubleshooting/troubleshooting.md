@@ -1,5 +1,7 @@
 # Portainer Deployment Troubleshooting
 
+The FAQ is updated periodically and designed to answer the questions our users most frequently ask about Portainer
+
 If you are still experiencing issues after reading this FAQ, feel free to contact us via any one of the following channels:
 
 * [Slack](https://portainer.slack.com/join/shared_invite/enQtNDk3ODQ5MjI2MjI4LTcwNGYxMWQ5OGViYWZkNDY2ZjY4YTMwMTgzYmU4YmNiOTU0MDcxYmJjNTIyYmQ0MTM5Y2QwNTg3NzNkMTk5MDg#/) for community support
@@ -8,9 +10,10 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 
 * [Youtube](https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg) for guided tutorials and updates
 
-* [Portainer.io](https://www.portainer.io) or the contact us tool at the bottom right of screen
 
-* Email [support@portainer.io](mailto:support@portainer.io)
+## How do I upgrade Portainer
+Instructions for upgrading Portainer CE can be found [here](https://documentation.portainer.io/v2.0/upgrade/upgrade/)
+
 
 ## How do I reset my Portainer password?
 
@@ -25,6 +28,16 @@ If you have recently updated your version of Portainer, this usually indicates y
 Note: You can use Ctrl + Shift + R on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
 
 Please also check you have pulled from the latest repo url. 
+
+## I signed up for a licence to BE but can't enter it in to CE, why not?
+
+Because of the difference in versions and features we don't provide the facility for a Business licence to be entered into CE.
+
+You will need to switch images from CE to BE. Once done you'll be able to enter the trial licence provide and get all the functionality of BE.
+
+The steps to install BE are at documentation.portainer.io
+
+You should experience no data loss in switching the images over.
 
 ## Users have access to an endpoint, but they cannot see anything.
 
@@ -78,6 +91,14 @@ These options are no needed, and no make any effect in the configuration of loca
 
 You can view more information about this bug and the progress for your resolution [here](https://github.com/portainer/portainer/issues/4316).
 
-## Notes
+## Can you view Deleted Docker Containers' logs in Portainer?
 
-[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md).
+There is no history of deleted containers kept, so once they are gone the logs will go as well.
+
+## Why do Custom standalone app templates not show when using Swarm 
+
+The underlying principle of Portainer is to enforce best practice across all functions, including Swarm. When using Swarm, you should always use Swarm services and not containers.
+
+## :material-note-text: Notes
+
+[Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}
