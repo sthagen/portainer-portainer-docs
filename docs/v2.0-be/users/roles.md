@@ -1,4 +1,13 @@
-# Description of Roles
+
+# :fontawesome-solid-users-cog: Roles
+
+<div class="container">
+<iframe src="//www.youtube.com/embed/6LjWqlHP2ME" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+
+## Description of Roles
 
 Portainer Business come with Role-Based Access Control features that refines the access privileges available natively within Portainer. The RBAC feature allows you to create fine-grained access for users across all resources and all endpoints defined within Portainer.
 
@@ -10,11 +19,13 @@ Portainer Business come with Role-Based Access Control features that refines the
 * To assign privileges, you pair a user or team with a role and associate that pairing with an endpoint or endpoint group.
 * A single user or team can have different roles for different endpoints in the Portainer inventory.
 
-## Describing Roles
+## Built-in Roles
 
-There are four types of roles:
+There are several types of roles:
 
 * Endpoint Administrator: has complete control over the resources deployed within a given endpoint, but is not able to make any changes to the infrastructure that underpins an endpoint (i.e. no host management), nor are they able to make any changes to Portainer internal settings.
+
+* Operator: has operational control over the resources deployed within a given endpoint. Operator is able to Update/Re-deploy/Start/Stop Containers/Services, check logs and console into containers but is not able to create any resources.
 
 * Helpdesk: has read-only access over the resources deployed within a given endpoint but is not able to make any changes to any resource, nor open a console to a container, or make changes to a container’s volumes.
 
@@ -24,6 +35,7 @@ There are four types of roles:
 
 * The Administrator role sits outside of these four roles, and effectively acts as a “Global Admin”. A user assigned this role has complete control over Portainer settings, and all resources on every endpoint under Portainer control.
 
-# Notes
+<br>
+## :material-note-text: Notes
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

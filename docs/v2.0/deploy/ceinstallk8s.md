@@ -1,15 +1,31 @@
----
-hide: toc
----
 
 # :material-kubernetes: Deploying Portainer CE in Kubernetes
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+
+<div class="container">
+<iframe src="//www.youtube.com/embed/wxXi_bmX_Zw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight containers on Kubernetes. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+
+Regardless of your configuration, you will need:
+
+* A working and up to date Kubernetes cluster
+* Access to run Helm or kubectl commands on your cluster
+* Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary `#!Ruby ServiceAccount` and `#!Ruby ClusterRoleBinding` for it to access the Kubernetes cluster.
+* A default StorageClass configured (see below)
 
 
-By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+By default, Portainer will expose the UI over port `#!Ruby 9000` and expose a TCP tunnel server over port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
 
 
-To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements).
+To learn more about the requirements please visit the [requirements](/v2.0/deploy/requirements) page.
+
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
+!!! Warning "Access Control & RBAC"
+    Kubernetes RBAC needs to enabled and working for Access Control to work properly in Portainer.
 
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 ---
@@ -32,7 +48,7 @@ kubectl patch storageclass <storage-class-name> -p '{"metadata": {"annotations":
 and replace <storage-class-name> with the name of your storage class        
 Example: `kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`
 
-Alternatively, if installing using our helm chart you can add the following option with helm install:
+Alternatively, if installing using our Helm chart you can add the following option with helm install:
 ```shell
 --set persistence.storageClass=<storage-class-name>
 ```
@@ -44,10 +60,9 @@ Alternatively, if installing using our helm chart you can add the following opti
 === "Deploy using Helm"
     !!! Abstract ""
         ### :fontawesome-solid-server: Portainer Server Deployment
-        Ensure you're using at least helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
+        Ensure you're using at least Helm v3.2, which [includes support](https://github.com/helm/helm/pull/7648) for the `--create-namespace` argument.
 
-
-        First, add the Portainer helm repo running the following:
+        First, add the Portainer helm repo by running the following:
         
         ```shell
         helm repo add portainer https://portainer.github.io/k8s/
@@ -57,7 +72,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         helm repo update
         ```
         
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like to expose the Portainer Service, select an option below:
     
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -67,7 +82,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             ```
 
         === "Ingress"
-            Using the following command, Poratainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. 
+            Using the following command, the Portainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. 
 
             ```shell
             helm install --create-namespace -n portainer portainer portainer/portainer \
@@ -78,10 +93,11 @@ Alternatively, if installing using our helm chart you can add the following opti
                 
                 ```shell
                 helm install --create-namespace -n portainer portainer portainer/portainer \
-                -- set service.type=ClusterIP \
-                -- set ingress.enabled=true \
-                -- set ingress.annotations='kubernetes.io/ingress.class: nginx' \
-                -- set ingress.hosts.host=portainer.example.io
+                --set service.type=ClusterIP \
+                --set ingress.enabled=true \
+                --set ingress.annotations.'kubernetes\.io/ingress\.class'=nginx \
+                --set ingress.hosts[0].host=portainer.example.io \
+                --set ingress.hosts[0].paths[0].path="/"
                 ```
         
         === "LoadBalancer"
@@ -130,7 +146,7 @@ Alternatively, if installing using our helm chart you can add the following opti
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
 
         Helm chart for Agent Only Deployments will be available soon.
-        In the mean time please head over to YAML Manifests tab.
+        In the meantime please head over to YAML Manifests tab.
 
 === "Deploy using YAML Manifests"
     !!! Abstract ""
@@ -168,7 +184,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
             ```
 
-=== "Deploy on Windows WSL"
+=== "Deploy on Windows WSL / Docker Desktop"
     !!! Abstract ""
         You can deploy Portainer in a Kubernetes environment in Windows using Docker Desktop. 
         
@@ -195,7 +211,7 @@ Alternatively, if installing using our helm chart you can add the following opti
 
         ### :fontawesome-solid-server: Portainer Server Deployment
 
-        Based on how you would like expose Portainer Service, Select an option below
+        Based on how you would like expose the Portainer Service, select an option below:
 
         === "NodePort"
             Using the following command, Portainer will be available on port 30777.
@@ -212,7 +228,7 @@ Alternatively, if installing using our helm chart you can add the following opti
             ```
 
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
-        Choose one of the tabs below based on how you would like to expose the agent.
+        Choose one of the tabs below based on how you would like to expose the agent:
 
         === "NodePort"
             Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.
@@ -234,17 +250,17 @@ Alternatively, if installing using our helm chart you can add the following opti
 ???+ Tip "Regarding Persisting Data"
     The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.
 
-    In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
+    In some Kubernetes clusters (for example microk8s), the default StorageClass simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.
 
-    While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.
+    While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.
 
     The nodeSelector can be added in the following ways:
 
-    1. Edit your own values.yaml and set the value of nodeSelector like this:
+    1. Edit your own values.yaml and set the value of nodeSelector:
 
             nodeSelector: kubernetes.io/hostname: \<YOUR NODE NAME>
 
-    2. Explicictly set the target node when deploying/updating the helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
+    2. Explicitly set the target node when deploying/updating the Helm chart on the CLI, by including `--set nodeSelector.kubernetes.io/hostname=<YOUR NODE NAME>`
     
     3. If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:
 

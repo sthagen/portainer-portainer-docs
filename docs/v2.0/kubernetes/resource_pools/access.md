@@ -1,10 +1,13 @@
-# Manage access to a resource pool
+# Manage access to a Namespace/Resource Pool
+
+!!! Warning "Access Control & RBAC"
+    Kubernetres RBAC needs to enabled and working for Access Control to work properly in Portainer.
 
 In this help article, you will learn how to manage access to created resource pools.
 
 ## Managing access
 
-Click <b>Resource Pools</b> then click <b>Manage Access</b> of the resource pool you want.
+Click <b>Namespaces/Resource Pools</b> then click <b>Manage Access</b> of the Namespace/Resource Pool you want.
 
 ![access](assets/access-1.png)
 

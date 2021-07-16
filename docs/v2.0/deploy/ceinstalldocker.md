@@ -4,17 +4,28 @@ hide:
 ---
 
 # :fontawesome-brands-docker: Deploying Portainer CE in Docker
-Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
+Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.
 
-Note that the recommended deployment mode when using Swarm is using the Portainer Agent.
+If you are using Docker Swarm, please refer to the Swarm-specific installation [instructions](/v2.0/deploy/ceinstallswarm/).
 
-By default, Portainer will expose the UI over the port `#!Ruby 9000` and expose a TCP tunnel server over the port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+Regardless of your configuration, you will need:
 
-To see the requirements, please, visit the page of [requirements](/v2.0/deploy/requirements).
+* The latest version of Docker installed and working. You can refer to [the Docker documentation](https://docs.docker.com/get-docker/) for platform-specific instructions.
+* Administrator or sudo access on the machine that will host your Portainer instance.
+* If you are using Docker Desktop on Windows you need to enable WSL2 if you need to run Linux containers.
+
+
+By default, Portainer will expose the UI over port `#!Ruby 9000` and expose a TCP tunnel server over port `#!Ruby 8000`. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.
+
+To learn more about the requirements please visit the [requirements](/v2.0/deploy/requirements) page.
+
+!!! Warning "Agent Versions"
+    Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. 
+
 
 ## :fontawesome-solid-paper-plane: Portainer Deployment
 
-Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):
+Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:
 
 === "Docker on Linux"
     !!! Abstract ""
@@ -32,11 +43,11 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent
         ```
 
-=== "Docker on Windows WSL"
+=== "Docker on Windows WSL / Docker Desktop"
     !!! Abstract ""
         Before you can deploy Portainer in Docker Standalone running in Windows, you need to install WSL. [Read this guide to know more about WSL/WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10){target=_blank}
 
-        Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):
+        Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:
         
         ### :fontawesome-solid-server: Portainer Server Deployment
         ```shell
@@ -56,7 +67,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
 === "Docker on Windows Container Service"
     !!! Abstract ""
-        To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These, can be easy added trough PowerShell, running the following commands:
+        To run Portainer in a Windows Server/Desktop Environment you need to create exceptions in the firewall. These can easily be added through PowerShell by running the following commands:
 
         ```shell
         netsh advfirewall firewall add rule name="cluster_management" dir=in action=allow protocol=TCP localport=2377
@@ -94,7 +105,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         Install-Package -Name docker -ProviderName DockerMsftProvider
         ```
 
-        Lastly, you need to restart your Windows Server. After it has restarted, you're ready to deploy Portainer.
+        Lastly, you need to restart your Windows Server. Once it has restarted you're ready to deploy Portainer.
 
         ### :fontawesome-solid-server: Portainer Server Deployment
 
@@ -105,7 +116,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
         docker run -d -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce
         ```
 
-        Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
+        Now you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.
 
         
         ### :fontawesome-solid-laptop: Portainer Agent Only Deployment
@@ -144,7 +155,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     ### Inside a file
     You can also store the plaintext password inside a file and use the <code>--admin-password-file</code> flag:
 
-    Add your password to a file running the following command: 
+    Add your password to a file, for example with the following command: 
 
     ```shell
     echo -n mypassword > /tmp/portainer_password
@@ -188,7 +199,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     docker run -d --label owner=acme nginx
     ```
 
-    To hide this container, simply add the -l owner=acme option on the CLI when starting Portainer:
+    To hide this container, simply add the <code>-l owner=acme</code> option on the CLI when starting Portainer:
 
     ```shell
     docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce -l owner=acme
@@ -202,12 +213,12 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
     ## Use your own logo
 
-    You do not like our logo? Want to make Portainer more corporate? Don’t worry, you can easily switch for an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
+    If you wish to replace our logo with your own, you can specify an external logo (it must be exactly 155px by 55px) using the <code>--logo flag</code>:
 
     ```shell
     docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --logo "https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg"
     ```
-    This can also be completed via the GUI in the Portaner Settings menu
+    This can also be updated via the GUI in the Portainer Settings menu.
 
     ## Use your own templates
 
@@ -215,7 +226,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
 
     By default Portainer templates will be used but you can also define your own templates.
 
-    Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the HTTP API.
+    Note: at the moment, templates are only loaded once at first Portainer startup. If you already deployed a Portainer instance and want to use your own templates after this, you’ll need to clear any existing templates (default templates) via the user interface or the HTTP API.
 
     Using the <code>--templates</code> flag you can specify an URL where the template file can be accessed via HTTP.
 
@@ -223,7 +234,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     docker run -d -p 9000:9000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce --templates http://my-host.my-domain/templates.json
     ```
 
-    Suggestion: You can host your template files in [Github](https://www.github.com)
+    The template file must be accessible from Portainer without authentication. We suggest hosting the template files on [Github](https://www.github.com).
 
     ## Available flags
 
@@ -236,7 +247,7 @@ Use the following Docker commands to deploy the Portainer Server; note the agent
     * <code>--edge-compute</code>: Automatically enable edge-compute features
     * <code>--hide-label, -l</code>: Hide containers with a specific label in the UI
     * <code>--host, -H</code>: Docker daemon endpoint
-    * <code>--logo</code>: URL to a picture to be displayed as a logo in the UI, use Portainer logo if not specified
+    * <code>--logo</code>: URL to an image to be displayed as a logo in the UI. Uses the Portainer logo if not specified
     * <code>--snapshot-interval</code>: Time interval between two endpoint snapshot jobs expressed as a string, e.g. 30s, 5m, 1h… as supported by the time.ParseDuration method (default: 5m)
     * <code>--ssl</code>: Secure Portainer instance using SSL (default: false)
     * <code>--sslcert</code>: Path to the SSL certificate used to secure the Portainer instance (default: /certs/portainer.crt, C:\certs\portainer.crt on Windows)

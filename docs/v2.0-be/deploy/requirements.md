@@ -10,16 +10,18 @@ To try and alleviate confusion as to what we test against, we have documented th
 
 ## :fontawesome-solid-check-double: Validated Configurations
 
-| Portainer Version     | Release Date | Docker Version | Kubernetes Version    | Architectures | Operating Systems                                                                            |
-|-----------------------|--------------|----------------|-----------------------|---------------|----------------------------------------------------------------------------------------------|
-| Business 2.0 (latest) | Dec 3, 2020  | 19.03.13       | 1.17.13 1.18.6 1.19.3 | ARM64, x86_64 | Windows 10 (version 1809) + WSL2, Windows Server 2019 (version 1809) + Windows Containers, Ubuntu 18.04 LTS, Ubuntu 20.04.1* |
+| Portainer Version     | Release Date | Docker Version | Kubernetes* Version    | Architectures |
+|-----------------------|--------------|----------------|-----------------------|---------------|
+| Business 2.4 (latest) | May 4, 2021  | 20.10.5      | 1.19 1.20.2 1.21 | ARM64, x86_64 |
+| Business 2.0 | Dec 3, 2020  | 19.03.13       | 1.17.13 1.18.6 1.19.3 | ARM64, x86_64 |
 
-*For Docker and K8s on ARM64.
+
+*RBAC needs to be enabled on Kubernetes for Portainer Access Control
 
 ## :material-note-text: Notes
 
 If you report a bug for a configuration that is not on the list above, we will ask you to first update your environment to match a validated configuration before continuing.
 
-Business Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0/deploy/requirements/)
+Consumer Edition Validated Configurations can be found [here](https://documentation.portainer.io/v2.0/deploy/requirements/)
 
 [Contribute to these docs](https://github.com/portainer/portainer-docs/blob/master/contributing.md){target=_blank}

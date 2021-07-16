@@ -1,5 +1,9 @@
 site_name: Documentation
-google_analytics: ['G-N7CY67ZGSW', 'documentation.portainer.io']
+site_url: https://documentation.portainer.io/
+use_directory_urls: true
+# google_analytics:
+#  - UA-84944922-5
+#  - auto
 nav:
     - Home: index.md
     - Quick Start: quickstart.md
@@ -10,6 +14,7 @@ nav:
           - 'Docker' : 'v2.0/deploy/ceinstalldocker.md'
           - 'Docker Swarm' : 'v2.0/deploy/ceinstallswarm.md'
           - 'Kubernetes' : 'v2.0/deploy/ceinstallk8s.md'
+          - 'Edge Agent': 'v2.0/deploy/edgeagent.md'
           - 'Using SSL with Portainer' : 'v2.0/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0/deploy/initial.md'
       - Business Edition:
@@ -17,6 +22,7 @@ nav:
           - 'Docker' : 'v2.0-be/deploy/beinstalldocker.md'
           - 'Docker Swarm' : 'v2.0-be/deploy/beinstallswarm.md'
           - 'Kubernetes' : 'v2.0-be/deploy/beinstallk8s.md'
+          - 'Edge Agent': 'v2.0/deploy/edgeagent.md'
           - 'Using SSL with Portainer' : 'v2.0-be/deploy/ssl.md'
           - 'Initial Setup' : 'v2.0-be/deploy/initial.md'
     - Admin Guide:
@@ -51,6 +57,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0/settings/edge.md'
           - 'App Templates' : 'v2.0/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0/backup/backup.md'
+          - 'Restore': 'v2.0/backup/restore.md'
         - Advanced Deployments:
           - 'Using Portainer with Reverse Proxies':
               - 'Traefik' : 'v2.0/ad/traefik/rp-traefik.md'
@@ -73,7 +82,11 @@ nav:
           - 'Automatic User Provisioning' : 'v2.0-be/auth/auto.md'
           - 'LDAP' : 'v2.0-be/auth/ldap.md'
           - 'Active Directory' : 'v2.0-be/auth/ad.md'
-          - 'OAuth' : 'v2.0-be/auth/oauth.md'
+          - 'OAuth' : 
+            - 'Microsoft': 'v2.0-be/auth/oauth-ms.md'
+            - 'Google': 'v2.0-be/auth/oauth-google.md'
+            - 'Github': 'v2.0-be/auth/oauth-github.md'
+            - 'Custom':  'v2.0-be/auth/oauth-cust.md'
           - 'Internal' : 'v2.0-be/auth/internal.md'
         - Managing Users & Teams:
           - 'RBAC Overview' : 'v2.0-be/users/roles.md'
@@ -96,6 +109,9 @@ nav:
           - 'Enable Edge Computing' : 'v2.0-be/settings/edge.md'
           - 'App Templates' : 'v2.0-be/settings/apps.md'
           - 'Enable Host Management Features' : 'v2.0-be/settings/host_management.md'
+        - Backup and Restore:
+          - 'Backup': 'v2.0-be/backup/backup.md'
+          - 'Restore': 'v2.0-be/backup/restore.md'          
         - Downgrading:
           - 'Downgrade from BE to CE': 'v2.0-be/downgrade/be-to-ce.md'
         - Advanced Deployments:
@@ -151,6 +167,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0/secrets/add.md'
             - 'Delete secrets' : 'v2.0/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0/kubernetes/applications/create.md'
@@ -158,9 +177,9 @@ nav:
             - 'Delete an Application' : 'v2.0/kubernetes/applications/delete.md'
             - 'Inspect an Application' : 'v2.0/kubernetes/applications/inspect.md'
           - 'Resource Pools':
-            - 'Create a Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
+            - 'Create a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/create.md'
             - 'Manage Access' : 'v2.0/kubernetes/resource_pools/access.md'
-            - 'Delete a Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
+            - 'Delete a Namespace/Resource Pool' : 'v2.0/kubernetes/resource_pools/delete.md'
           - 'Volumes':
             - 'Inspect a volume' : 'v2.0/kubernetes/volumes/inspect.md'
             - 'Resize a volume' : 'v2.0/kubernetes/volumes/resize.md'
@@ -225,6 +244,9 @@ nav:
           - 'Secrets':
             - 'Add a new secret' : 'v2.0-be/secrets/add.md'
             - 'Delete secrets' : 'v2.0-be/secrets/delete.md'
+          - 'Access Control':
+            - 'Resources Deployed through Portainer': 'v2.0-be/access/inportainer.md'
+            - 'Resources Deployed outside of Portainer': 'v2.0-be/access/outofportainer.md'
         - Kubernetes:
           - 'Applications':
             - 'Deploy a new application' : 'v2.0-be/kubernetes/applications/create.md'
@@ -255,11 +277,20 @@ nav:
         - Registries:
           - 'Browse a Registry' : 'v2.0-be/registries/browse.md'
           - 'Manage a Registry' : 'v2.0-be/registries/manage.md'        
+    - API: 
+      - 'Documentation': 'api/api-schema.md'
+      - 'Examples': 'api/api-examples.md'
     - Upgrading Portainer:
-      - 'Upgrade Path': 'v2.0/upgrade/upgrade.md'
-      - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
-      - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
-      - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
+      - 'Upgrade Path': 'upgrade.md'
+      - 'Upgrade CE to Business': 'v2.0/upgrade/updBE.md'
+      - 'Community Edition':
+        - 'Upgrading on Docker': 'v2.0/upgrade/upddocker.md'
+        - 'Upgrading on DockerSwarm': 'v2.0/upgrade/updswarm.md'
+        - 'Upgrading on Kubernetes': 'v2.0/upgrade/updk8s.md'
+      - 'Business Edition':
+        - 'Upgrading on Docker': 'v2.0-be/upgrade/upddocker.md'
+        - 'Upgrading on DockerSwarm': 'v2.0-be/upgrade/updswarm.md'
+        - 'Upgrading on Kubernetes': 'v2.0-be/upgrade/updk8s.md'
     - FAQs : 'https://support.portainer.io'
     - Videos : 'https://www.youtube.com/channel/UC7diMJcrULjDseq5yhSUZgg/videos/" target="_blank'
     - Older Releases:
@@ -282,6 +313,7 @@ nav:
 
 extra_css:
     - css/extra.css
+    
 theme:
   font:
     text: Raleway
@@ -290,9 +322,10 @@ theme:
   logo: assets/logo.png
   favicon: assets/icon.webp
   name: material
+  custom_dir: overrides
   palette:
     primary: light-blue
-repo_name: portainer/portainer
+repo_name: portainer/portainer-docs
 repo_url: https://github.com/portainer/portainer-docs
 markdown_extensions:
   - attr_list
@@ -309,6 +342,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 plugins:
+  - render_swagger
   - search
   - redirects:
         redirect_maps:
@@ -318,8 +352,12 @@ plugins:
             'v2.0-be/deploy/linux.md': 'quickstart.md'
             'v2.0-be/deploy/windows10.md': 'quickstart.md'
             'v2.0-be/deploy/windowsserver.md': 'quickstart.md'
+            'api.md': 'api/api-schema.md'
 
 extra:
+  analytics:
+    provider: google
+    property: GTM-TTJQ5VG
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/portainerio
