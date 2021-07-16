@@ -9,8 +9,10 @@
       
       
       
-      <link rel="shortcut icon" href="../../../assets/icon.webp">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+        <link rel="canonical" href="https://documentation.portainer.io/archive/1.23.2/API/">
+      
+      <link rel="icon" href="../../../assets/icon.webp">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -18,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -43,12 +45,13 @@
       <link rel="stylesheet" href="../../../css/extra.css">
     
     
-      
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-N7CY67ZGSW","documentation.portainer.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJQ5VG');</script>
+    <!-- End Google Tag Manager -->   
+
     
   </head>
   
@@ -59,8 +62,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="">
-      
   
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -72,11 +76,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -100,9 +102,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -118,7 +119,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -140,10 +141,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
       </div>
@@ -167,11 +168,9 @@
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -184,10 +183,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
     </div>
@@ -263,7 +262,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -284,7 +282,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -329,6 +326,18 @@
     <li class="md-nav__item">
       <a href="../../../v2.0/deploy/ceinstallk8s/" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/deploy/edgeagent/" class="md-nav__link">
+        Edge Agent
       </a>
     </li>
   
@@ -385,7 +394,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -429,6 +437,18 @@
     <li class="md-nav__item">
       <a href="../../../v2.0-be/deploy/beinstallk8s/" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/deploy/edgeagent/" class="md-nav__link">
+        Edge Agent
       </a>
     </li>
   
@@ -494,7 +514,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -516,7 +535,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -537,7 +555,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -674,7 +691,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -737,7 +753,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -838,7 +853,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -889,7 +903,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -968,16 +981,45 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6" type="checkbox" id="__nav_5_1_6" >
       
       <label class="md-nav__link" for="__nav_5_1_6">
-        Advanced Deployments
+        Backup and Restore
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_1_6">
           <span class="md-nav__icon md-icon"></span>
-          Advanced Deployments
+          Backup and Restore
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -987,19 +1029,39 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6_1" type="checkbox" id="__nav_5_1_6_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7" type="checkbox" id="__nav_5_1_7" >
       
-      <label class="md-nav__link" for="__nav_5_1_6_1">
+      <label class="md-nav__link" for="__nav_5_1_7">
+        Advanced Deployments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced Deployments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7_1" type="checkbox" id="__nav_5_1_7_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1_7_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_1_6_1">
+        <label class="md-nav__title" for="__nav_5_1_7_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1076,7 +1138,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1097,7 +1158,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1234,7 +1294,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1273,7 +1332,6 @@
           Authentication Sources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1315,10 +1373,73 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../v2.0-be/auth/oauth/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3_4" type="checkbox" id="__nav_5_2_3_4" >
+      
+      <label class="md-nav__link" for="__nav_5_2_3_4">
         OAuth
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OAuth" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          OAuth
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-ms/" class="md-nav__link">
+        Microsoft
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-google/" class="md-nav__link">
+        Google
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-github/" class="md-nav__link">
+        Github
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-cust/" class="md-nav__link">
+        Custom
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1361,7 +1482,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1486,7 +1606,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1549,7 +1668,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1652,16 +1770,66 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_7" type="checkbox" id="__nav_5_2_7" >
       
       <label class="md-nav__link" for="__nav_5_2_7">
+        Backup and Restore
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Backup and Restore
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+      
+      <label class="md-nav__link" for="__nav_5_2_8">
         Downgrading
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Downgrading" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_7">
+        <label class="md-nav__title" for="__nav_5_2_8">
           <span class="md-nav__icon md-icon"></span>
           Downgrading
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1689,19 +1857,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9" type="checkbox" id="__nav_5_2_9" >
       
-      <label class="md-nav__link" for="__nav_5_2_8">
+      <label class="md-nav__link" for="__nav_5_2_9">
         Advanced Deployments
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_8">
+        <label class="md-nav__title" for="__nav_5_2_9">
           <span class="md-nav__icon md-icon"></span>
           Advanced Deployments
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1711,19 +1878,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8_1" type="checkbox" id="__nav_5_2_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9_1" type="checkbox" id="__nav_5_2_9_1" >
       
-      <label class="md-nav__link" for="__nav_5_2_8_1">
+      <label class="md-nav__link" for="__nav_5_2_9_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_2_8_1">
+        <label class="md-nav__title" for="__nav_5_2_9_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1809,7 +1975,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1830,7 +1995,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1853,7 +2017,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1874,7 +2037,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1951,7 +2113,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1990,7 +2151,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2115,7 +2275,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2166,7 +2325,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2243,7 +2401,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2294,7 +2451,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2395,7 +2551,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2471,7 +2626,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2523,7 +2677,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2543,6 +2696,57 @@
     <li class="md-nav__item">
       <a href="../../../v2.0/secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_1_11" type="checkbox" id="__nav_6_1_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_1_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_1_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -2581,7 +2785,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2602,7 +2805,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2679,14 +2881,13 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
   
     <li class="md-nav__item">
       <a href="../../../v2.0/kubernetes/resource_pools/create/" class="md-nav__link">
-        Create a Resource Pool
+        Create a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2710,7 +2911,7 @@
   
     <li class="md-nav__item">
       <a href="../../../v2.0/kubernetes/resource_pools/delete/" class="md-nav__link">
-        Delete a Resource Pool
+        Delete a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2742,7 +2943,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2807,7 +3007,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2859,7 +3058,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2904,7 +3102,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2968,7 +3165,6 @@
           Edge
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3039,7 +3235,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3061,7 +3256,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3082,7 +3276,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3159,7 +3352,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3198,7 +3390,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3323,7 +3514,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3374,7 +3564,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3451,7 +3640,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3502,7 +3690,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3603,7 +3790,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3679,7 +3865,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3731,7 +3916,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3751,6 +3935,57 @@
     <li class="md-nav__item">
       <a href="../../../v2.0-be/secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_11" type="checkbox" id="__nav_6_2_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_2_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -3789,7 +4024,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3810,7 +4044,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3887,7 +4120,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3950,7 +4182,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4015,7 +4246,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4067,7 +4297,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4112,7 +4341,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4177,7 +4405,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4241,7 +4468,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4298,28 +4524,114 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
-        Upgrading Portainer
+        API
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+      <nav class="md-nav" aria-label="API" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Upgrading Portainer
+          API
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
   
   
     <li class="md-nav__item">
-      <a href="../../../v2.0/upgrade/upgrade/" class="md-nav__link">
+      <a href="../../../api/api-schema/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/api-examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Upgrading Portainer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrading Portainer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/" class="md-nav__link">
         Upgrade Path
       </a>
     </li>
   
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/upgrade/updBE/" class="md-nav__link">
+        Upgrade CE to Business
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Community Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Community Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Community Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -4353,6 +4665,75 @@
       <a href="../../../v2.0/upgrade/updk8s/" class="md-nav__link">
         Upgrading on Kubernetes
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      <label class="md-nav__link" for="__nav_8_4">
+        Business Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Business Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Business Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/upddocker/" class="md-nav__link">
+        Upgrading on Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/updswarm/" class="md-nav__link">
+        Upgrading on DockerSwarm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/updk8s/" class="md-nav__link">
+        Upgrading on Kubernetes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -4406,19 +4787,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
       
-      <label class="md-nav__link" for="__nav_10">
+      <label class="md-nav__link" for="__nav_11">
         Older Releases
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Older Releases" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Older Releases
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4430,19 +4810,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" checked>
       
-      <label class="md-nav__link" for="__nav_10_1">
+      <label class="md-nav__link" for="__nav_11_1">
         CE 1.23.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="CE 1.23.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_1">
+        <label class="md-nav__title" for="__nav_11_1">
           <span class="md-nav__icon md-icon"></span>
           CE 1.23.2
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4465,6 +4844,7 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -4594,19 +4974,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_11">
+      <label class="md-nav__link" for="__nav_12">
         Contributing to Portainer
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Contributing to Portainer" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Contributing to Portainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4667,10 +5046,10 @@
                   </a>
                 
                 
-                <h1>API</h1>
+                <h1 id="api">API</h1>
 <p>Portainer exposes an HTTP API that you can use to automate everything
 you do via the Portainer UI.</p>
-<h2>Documentation</h2>
+<h2 id="documentation">Documentation</h2>
 <p>The API documentation is available on
 <a href="https://app.swaggerhub.com/apis/deviantony/Portainer/1.23.2/">Swaggerhub</a>
 and you can also find some examples
@@ -4685,6 +5064,7 @@ and you can also find some examples
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -4692,7 +5072,8 @@ and you can also find some examples
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../agent/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../agent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Agent" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -4707,7 +5088,8 @@ and you can also find some examples
         </a>
       
       
-        <a href="../configuration/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuration" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -4731,6 +5113,7 @@ and you can also find some examples
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -4790,10 +5173,10 @@ and you can also find some examples
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

@@ -9,8 +9,10 @@
       
       
       
-      <link rel="shortcut icon" href="../../../assets/icon.webp">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+        <link rel="canonical" href="https://documentation.portainer.io/v2.0/deploy/ceinstallswarm/">
+      
+      <link rel="icon" href="../../../assets/icon.webp">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -18,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -43,12 +45,13 @@
       <link rel="stylesheet" href="../../../css/extra.css">
     
     
-      
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-N7CY67ZGSW","documentation.portainer.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJQ5VG');</script>
+    <!-- End Google Tag Manager -->   
+
     
   </head>
   
@@ -59,8 +62,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="">
-      
   
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -72,11 +76,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -100,9 +102,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -118,7 +119,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -140,10 +141,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
       </div>
@@ -161,19 +162,15 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -186,10 +183,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
     </div>
@@ -267,7 +264,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -290,7 +286,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -327,6 +322,7 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Docker Swarm
       </a>
@@ -342,6 +338,18 @@
     <li class="md-nav__item">
       <a href="../ceinstallk8s/" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../edgeagent/" class="md-nav__link">
+        Edge Agent
       </a>
     </li>
   
@@ -398,7 +406,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -442,6 +449,18 @@
     <li class="md-nav__item">
       <a href="../../../v2.0-be/deploy/beinstallk8s/" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../edgeagent/" class="md-nav__link">
+        Edge Agent
       </a>
     </li>
   
@@ -507,7 +526,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -529,7 +547,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -550,7 +567,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -687,7 +703,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -750,7 +765,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -851,7 +865,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -902,7 +915,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -981,16 +993,45 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6" type="checkbox" id="__nav_5_1_6" >
       
       <label class="md-nav__link" for="__nav_5_1_6">
-        Advanced Deployments
+        Backup and Restore
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_1_6">
           <span class="md-nav__icon md-icon"></span>
-          Advanced Deployments
+          Backup and Restore
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -1000,19 +1041,39 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6_1" type="checkbox" id="__nav_5_1_6_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7" type="checkbox" id="__nav_5_1_7" >
       
-      <label class="md-nav__link" for="__nav_5_1_6_1">
+      <label class="md-nav__link" for="__nav_5_1_7">
+        Advanced Deployments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced Deployments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7_1" type="checkbox" id="__nav_5_1_7_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1_7_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_1_6_1">
+        <label class="md-nav__title" for="__nav_5_1_7_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1089,7 +1150,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1110,7 +1170,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1247,7 +1306,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1286,7 +1344,6 @@
           Authentication Sources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1328,10 +1385,73 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../v2.0-be/auth/oauth/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3_4" type="checkbox" id="__nav_5_2_3_4" >
+      
+      <label class="md-nav__link" for="__nav_5_2_3_4">
         OAuth
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OAuth" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          OAuth
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-ms/" class="md-nav__link">
+        Microsoft
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-google/" class="md-nav__link">
+        Google
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-github/" class="md-nav__link">
+        Github
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/auth/oauth-cust/" class="md-nav__link">
+        Custom
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1374,7 +1494,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1499,7 +1618,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1562,7 +1680,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1665,16 +1782,66 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_7" type="checkbox" id="__nav_5_2_7" >
       
       <label class="md-nav__link" for="__nav_5_2_7">
+        Backup and Restore
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Backup and Restore
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+      
+      <label class="md-nav__link" for="__nav_5_2_8">
         Downgrading
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Downgrading" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_7">
+        <label class="md-nav__title" for="__nav_5_2_8">
           <span class="md-nav__icon md-icon"></span>
           Downgrading
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1702,19 +1869,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9" type="checkbox" id="__nav_5_2_9" >
       
-      <label class="md-nav__link" for="__nav_5_2_8">
+      <label class="md-nav__link" for="__nav_5_2_9">
         Advanced Deployments
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_8">
+        <label class="md-nav__title" for="__nav_5_2_9">
           <span class="md-nav__icon md-icon"></span>
           Advanced Deployments
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1724,19 +1890,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8_1" type="checkbox" id="__nav_5_2_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9_1" type="checkbox" id="__nav_5_2_9_1" >
       
-      <label class="md-nav__link" for="__nav_5_2_8_1">
+      <label class="md-nav__link" for="__nav_5_2_9_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_2_8_1">
+        <label class="md-nav__title" for="__nav_5_2_9_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1822,7 +1987,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1843,7 +2007,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1866,7 +2029,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1887,7 +2049,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1964,7 +2125,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2003,7 +2163,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2128,7 +2287,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2179,7 +2337,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2256,7 +2413,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2307,7 +2463,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2408,7 +2563,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2484,7 +2638,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2536,7 +2689,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2556,6 +2708,57 @@
     <li class="md-nav__item">
       <a href="../../secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_1_11" type="checkbox" id="__nav_6_1_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_1_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_1_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -2594,7 +2797,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2615,7 +2817,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2692,14 +2893,13 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
   
     <li class="md-nav__item">
       <a href="../../kubernetes/resource_pools/create/" class="md-nav__link">
-        Create a Resource Pool
+        Create a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2723,7 +2923,7 @@
   
     <li class="md-nav__item">
       <a href="../../kubernetes/resource_pools/delete/" class="md-nav__link">
-        Delete a Resource Pool
+        Delete a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2755,7 +2955,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2820,7 +3019,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2872,7 +3070,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2917,7 +3114,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2981,7 +3177,6 @@
           Edge
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3052,7 +3247,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3074,7 +3268,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3095,7 +3288,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3172,7 +3364,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3211,7 +3402,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3336,7 +3526,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3387,7 +3576,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3464,7 +3652,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3515,7 +3702,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3616,7 +3802,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3692,7 +3877,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3744,7 +3928,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3764,6 +3947,57 @@
     <li class="md-nav__item">
       <a href="../../../v2.0-be/secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_11" type="checkbox" id="__nav_6_2_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_2_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -3802,7 +4036,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3823,7 +4056,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3900,7 +4132,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3963,7 +4194,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4028,7 +4258,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4080,7 +4309,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4125,7 +4353,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4190,7 +4417,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4254,7 +4480,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4311,28 +4536,114 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
-        Upgrading Portainer
+        API
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+      <nav class="md-nav" aria-label="API" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Upgrading Portainer
+          API
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
   
   
     <li class="md-nav__item">
-      <a href="../../upgrade/upgrade/" class="md-nav__link">
+      <a href="../../../api/api-schema/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/api-examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Upgrading Portainer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrading Portainer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/" class="md-nav__link">
         Upgrade Path
       </a>
     </li>
   
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/updBE/" class="md-nav__link">
+        Upgrade CE to Business
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Community Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Community Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Community Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -4366,6 +4677,75 @@
       <a href="../../upgrade/updk8s/" class="md-nav__link">
         Upgrading on Kubernetes
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      <label class="md-nav__link" for="__nav_8_4">
+        Business Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Business Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Business Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/upddocker/" class="md-nav__link">
+        Upgrading on Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/updswarm/" class="md-nav__link">
+        Upgrading on DockerSwarm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0-be/upgrade/updk8s/" class="md-nav__link">
+        Upgrading on Kubernetes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -4417,19 +4797,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
-      <label class="md-nav__link" for="__nav_10">
+      <label class="md-nav__link" for="__nav_11">
         Older Releases
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Older Releases" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Older Releases
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4439,19 +4818,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
       
-      <label class="md-nav__link" for="__nav_10_1">
+      <label class="md-nav__link" for="__nav_11_1">
         CE 1.23.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="CE 1.23.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_1">
+        <label class="md-nav__title" for="__nav_11_1">
           <span class="md-nav__icon md-icon"></span>
           CE 1.23.2
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4596,19 +4974,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_11">
+      <label class="md-nav__link" for="__nav_12">
         Contributing to Portainer
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Contributing to Portainer" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Contributing to Portainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4669,58 +5046,76 @@
                   </a>
                 
                 
-                <h1><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg></span> Deploying Portainer CE in Docker Swarm</h1>
-<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine or within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
-<p>Note that the recommended deployment mode when using Swarm is using the Portainer Agent.</p>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0/deploy/requirements">requirements</a>.</p>
-<h2><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
-<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see Portainer and agent scenario below):</p>
+                <h1 id="deploying-portainer-ce-in-docker-swarm"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg></span> Deploying Portainer CE in Docker Swarm</h1>
+<div class="container">
+<iframe src="//www.youtube.com/embed/L80QDuix5RE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers within a Swarm cluster. Due to the nature of Docker, there are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<!-- **Note:** The recommended deployment mode when using Swarm is using the Portainer Agent. -->
+
+<p>Regardless of your configuration, you will need:</p>
+<ul>
+<li>The latest version of Docker installed and working, with swarm mode enabled and your nodes added. You can refer to <a href="https://docs.docker.com/get-docker/">the Docker documentation</a> for platform-specific instructions.</li>
+<li>Administrator or sudo access on the machine that will host the Portainer Server service.</li>
+<li>Administrator or sudo access on the machines where you will deploy the Portainer Agent if you need to add more endpoints to your Portainer instance.</li>
+</ul>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0/deploy/requirements">requirements</a> page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Agent Versions</p>
+<p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
+</div>
+<h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
+<p>Use the following Docker commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Docker Swarm on Linux</label><div class="tabbed-content">
 <div class="admonition abstract">
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.</p>
+<h3 id="portainer-server-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<p>Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploy the Portainer Agent as a global service on every node in your cluster.</p>
 <p><div class="highlight"><pre><span></span><code>curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker stack deploy -c portainer-agent-stack.yml portainer
 </code></pre></div></p>
-<p><b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable from the UI of Portainer.</p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
-<p>Deploy Portainer Agent on a remote LINUX Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.</p>
+<p><b>Note</b>: By default this stack doesn't enable Host Management Features, you need to enable this from the UI of Portainer.</p>
+<h3 id="portainer-agent-only-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<p>To deploy Portainer Agent on a remote Linux Swarm Cluster as a Swarm Service, run this command on a manager node in the remote cluster.</p>
 <p>First create the network:</p>
-<div class="highlight"><pre><span></span><code>docker network create portainer_agent_network
+<div class="highlight"><pre><span></span><code>docker network create --driver overlay --attachable portainer_agent_network
 </code></pre></div>
-<p>The following step is deploy the Agent:</p>
+<p>The following step will deploy the Agent:</p>
 <div class="highlight"><pre><span></span><code>docker service create --name portainer_agent --network portainer_agent_network --publish <span class="nv">mode</span><span class="o">=</span>host,target<span class="o">=</span><span class="m">9001</span>,published<span class="o">=</span><span class="m">9001</span> -e <span class="nv">AGENT_CLUSTER_ADDR</span><span class="o">=</span>tasks.portainer_agent --mode global --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/lib/docker/volumes,dst<span class="o">=</span>/var/lib/docker/volumes --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/,dst<span class="o">=</span>/host portainer/agent
 </code></pre></div>
 </div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Docker Swarm on Windows WSL</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Docker Swarm on Windows WSL / Docker Desktop</label><div class="tabbed-content">
 <div class="admonition abstract">
 <p>Before you can deploy Portainer in Docker Swarm running in Windows, you need to install WSL. <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Read this guide to know more about WSL/WSL2</a></p>
-<p>Use the following Docker Swarmcommands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used (see portainer and agent scenario below):</p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Deploying Portainer and the Portainer Agent to manage a Swarm cluster is easy! You can directly deploy Portainer as a service in your Docker cluster. Note that this method will automatically deploy a single instance 
-of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.</p>
-<p>Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this running the following command:</p>
+<p>Use the following Docker Swarm commands to deploy the Portainer Server; note the agent is not needed on standalone hosts, however it does provide additional functionality if used:</p>
+<h3 id="portainer-server-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<p>Portainer can be directly deployed as a service in your Docker cluster. Note that this method will automatically deploy a single instance of the Portainer Server, and deploys the Portainer Agent as a global service on every node in your cluster.</p>
+<p>Remember to initiate the Docker Swarm mode when you use Docker Desktop. You can do this by running the following command:</p>
 <div class="highlight"><pre><span></span><code>docker swarm init
 </code></pre></div>
 <p>The terminal will reply with this:</p>
 <div class="highlight"><pre><span></span><code>Swarm initialized: current node <span class="o">(</span>15gbf4d66mvzk3die00sgirpf<span class="o">)</span> is now a manager.
 
-To add a worker to this swarm, run the following command:
+To add a worker to this swarm, run the &lt;code&gt;swarm join&lt;/code&gt; <span class="nb">command</span> that is provided when initializing the swarm <span class="o">(</span>it will look similar to the following<span class="o">)</span>:
 
     docker swarm join --token SWMTKN-1-096qbnf2b9yywagu5ht3731zlpkeqazgctffolntsiljfp0m34-c4snnxplgwq2bd1ohta8k48b9 <span class="m">192</span>.168.65.3:2377
 
 To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-token manager&#39;</span> and follow the instructions.
 </code></pre></div>
-<p>Once this is done, you can continue with the installation running the following command:</p>
+<p>Once this is done, you can continue with the installation by running the following command:</p>
 <p><div class="highlight"><pre><span></span><code>curl -L https://downloads.portainer.io/portainer-agent-stack.yml -o portainer-agent-stack.yml
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker stack deploy -c portainer-agent-stack.yml portainer
 </code></pre></div></p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
-<p>Deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster.</p>
+<h3 id="portainer-agent-only-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<p>First create the network:</p>
+<div class="highlight"><pre><span></span><code>docker network create --driver overlay --attachable portainer_agent_network
+</code></pre></div>
+<p>To deploy Portainer Agent on a Swarm Cluster as a Swarm Service, run this command in a manager node in the cluster:</p>
 <div class="highlight"><pre><span></span><code>docker service create --name portainer_agent --network portainer_agent_network --publish <span class="nv">mode</span><span class="o">=</span>host,target<span class="o">=</span><span class="m">9001</span>,published<span class="o">=</span><span class="m">9001</span> -e <span class="nv">AGENT_CLUSTER_ADDR</span><span class="o">=</span>tasks.portainer_agent --mode global --mount <span class="nv">type</span><span class="o">=</span><span class="nb">bind</span>
 <span class="nv">src</span><span class="o">=</span>//var/run/docker.sock,dst<span class="o">=</span>/var/run/docker.sock --mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>//var/lib/docker/volumes,dst<span class="o">=</span>/var/lib/docker/volumes –-mount <span class="nv">type</span><span class="o">=</span>bind,src<span class="o">=</span>/,dst<span class="o">=</span>/host portainer/agent
 </code></pre></div>
@@ -4728,7 +5123,7 @@ To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-toke
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Docker Swarm on Windows Container Service</label><div class="tabbed-content">
 <div class="admonition abstract">
-<p>To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These, can be easy added through PowerShell, running the following commands:</p>
+<p>To run Portainer in a Windows Server/Desktop Environment, you need to create exceptions in the firewall. These can be easily added through PowerShell by running the following commands:</p>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;cluster_management&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">2377</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>netsh advfirewall firewall add rule <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;node_communication_tcp&quot;</span> <span class="nv">dir</span><span class="o">=</span><span class="k">in</span> <span class="nv">action</span><span class="o">=</span>allow <span class="nv">protocol</span><span class="o">=</span>TCP <span class="nv">localport</span><span class="o">=</span><span class="m">7946</span>
@@ -4749,25 +5144,23 @@ To add a manager to this swarm, run <span class="s1">&#39;docker swarm join-toke
 <div class="highlight"><pre><span></span><code>Install-Package -Name docker -ProviderName DockerMsftProvider
 </code></pre></div></p>
 <p>Lastly, you need to restart your Windows Server. After it has restarted, you're ready to deploy Portainer.</p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<h3 id="portainer-server-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
 <p>You can use our YML manifest to run Portainer in Windows using Windows Containers. In Powershell, run:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">downloads</span><span class="p">.</span><span class="n">portainer</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">portainer_windows_stack</span><span class="p">.</span><span class="n">yml</span> <span class="n">-o</span> <span class="n">portainer_windows_stack</span><span class="p">.</span><span class="n">yml</span>
+<p><div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">https</span><span class="p">://</span><span class="n">downloads</span><span class="p">.</span><span class="n">portainer</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">portainer_windows_stack</span><span class="p">.</span><span class="n">yml</span> <span class="n">-o</span> <span class="n">portainer_windows_stack</span><span class="p">.</span><span class="n">yml</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">docker</span> <span class="n">stack</span> <span class="n">deploy</span> <span class="p">-</span><span class="n">-compose</span><span class="o">-file</span><span class="p">=</span><span class="n">portainer_windows_stack</span><span class="p">.</span><span class="n">yml</span> <span class="n">portainer</span>
 </code></pre></div>
 Now, you can navigate to http://localhost:9000 or the IP of the server and start using Portainer.</p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<h3 id="portainer-agent-only-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
 <p>To run Portainer Agent in a Windows Container scenario, you need to execute the following commands:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">-L</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">downloads</span><span class="p">.</span><span class="n">portainer</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="n">-o</span> <span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="p">&amp;&amp;</span> <span class="n">docker</span> <span class="n">stack</span> <span class="n">deploy</span> <span class="p">-</span><span class="n">-compose</span><span class="o">-file</span><span class="p">=</span><span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="n">portainer-agent</span>
+<div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="n">-L</span> <span class="n">https</span><span class="p">://</span><span class="n">downloads</span><span class="p">.</span><span class="n">portainer</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="n">-o</span> <span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="p">&amp;&amp;</span> <span class="n">docker</span> <span class="n">stack</span> <span class="n">deploy</span> <span class="p">-</span><span class="n">-compose</span><span class="o">-file</span><span class="p">=</span><span class="n">agent-stack-windows</span><span class="p">.</span><span class="n">yml</span> <span class="n">portainer-agent</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <p><br></p>
-<h2><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5V10M5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2H5m0 4v2h9v-2H5z"/></svg></span> Notes</h2>
+<h2 id="notes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5V10M5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2H5m0 4v2h9v-2H5z"/></svg></span> Notes</h2>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md" target="_blank">Contribute to these docs</a></p>
-                
-                  
                 
               
               
@@ -4778,6 +5171,7 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -4785,7 +5179,8 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../ceinstalldocker/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../ceinstalldocker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -4800,7 +5195,8 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
         </a>
       
       
-        <a href="../ceinstallk8s/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../ceinstallk8s/" class="md-footer__link md-footer__link--next" aria-label="Next: Kubernetes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -4824,6 +5220,7 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -4883,10 +5280,10 @@ Now, you can navigate to http://localhost:9000 or the IP of the server and start
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>

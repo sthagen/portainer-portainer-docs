@@ -9,8 +9,10 @@
       
       
       
-      <link rel="shortcut icon" href="../../../assets/icon.webp">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.1">
+        <link rel="canonical" href="https://documentation.portainer.io/v2.0-be/deploy/beinstallk8s/">
+      
+      <link rel="icon" href="../../../assets/icon.webp">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
@@ -18,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -43,12 +45,13 @@
       <link rel="stylesheet" href="../../../css/extra.css">
     
     
-      
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-N7CY67ZGSW","documentation.portainer.io"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
-    
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJQ5VG');</script>
+    <!-- End Google Tag Manager -->   
+
     
   </head>
   
@@ -59,8 +62,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="">
-      
   
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -72,11 +76,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -100,9 +102,8 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -118,7 +119,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
       <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -140,10 +141,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
       </div>
@@ -169,11 +170,9 @@
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation">
+    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -186,10 +185,10 @@
 <a href="https://github.com/portainer/portainer-docs/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    portainer/portainer
+    portainer/portainer-docs
   </div>
 </a>
     </div>
@@ -267,7 +266,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -288,7 +286,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -333,6 +330,18 @@
     <li class="md-nav__item">
       <a href="../../../v2.0/deploy/ceinstallk8s/" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/deploy/edgeagent/" class="md-nav__link">
+        Edge Agent
       </a>
     </li>
   
@@ -391,7 +400,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -439,10 +447,23 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Kubernetes
       </a>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/deploy/edgeagent/" class="md-nav__link">
+        Edge Agent
+      </a>
     </li>
   
 
@@ -507,7 +528,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -529,7 +549,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -550,7 +569,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -687,7 +705,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -750,7 +767,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -851,7 +867,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -902,7 +917,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -981,16 +995,45 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6" type="checkbox" id="__nav_5_1_6" >
       
       <label class="md-nav__link" for="__nav_5_1_6">
-        Advanced Deployments
+        Backup and Restore
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
         <label class="md-nav__title" for="__nav_5_1_6">
           <span class="md-nav__icon md-icon"></span>
-          Advanced Deployments
+          Backup and Restore
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
           
             
   
@@ -1000,19 +1043,39 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_6_1" type="checkbox" id="__nav_5_1_6_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7" type="checkbox" id="__nav_5_1_7" >
       
-      <label class="md-nav__link" for="__nav_5_1_6_1">
+      <label class="md-nav__link" for="__nav_5_1_7">
+        Advanced Deployments
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced Deployments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1_7_1" type="checkbox" id="__nav_5_1_7_1" >
+      
+      <label class="md-nav__link" for="__nav_5_1_7_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_1_6_1">
+        <label class="md-nav__title" for="__nav_5_1_7_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1089,7 +1152,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1110,7 +1172,6 @@
           Managing Endpoints
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1247,7 +1308,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1286,7 +1346,6 @@
           Authentication Sources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1328,10 +1387,73 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../auth/oauth/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_3_4" type="checkbox" id="__nav_5_2_3_4" >
+      
+      <label class="md-nav__link" for="__nav_5_2_3_4">
         OAuth
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OAuth" data-md-level="4">
+        <label class="md-nav__title" for="__nav_5_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          OAuth
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auth/oauth-ms/" class="md-nav__link">
+        Microsoft
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auth/oauth-google/" class="md-nav__link">
+        Google
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auth/oauth-github/" class="md-nav__link">
+        Github
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auth/oauth-cust/" class="md-nav__link">
+        Custom
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1374,7 +1496,6 @@
           Managing Users & Teams
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1499,7 +1620,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1562,7 +1682,6 @@
           Configuring Settings
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1665,16 +1784,66 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_7" type="checkbox" id="__nav_5_2_7" >
       
       <label class="md-nav__link" for="__nav_5_2_7">
+        Backup and Restore
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Backup and Restore" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Backup and Restore
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup/backup/" class="md-nav__link">
+        Backup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+      
+      <label class="md-nav__link" for="__nav_5_2_8">
         Downgrading
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Downgrading" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_7">
+        <label class="md-nav__title" for="__nav_5_2_8">
           <span class="md-nav__icon md-icon"></span>
           Downgrading
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1702,19 +1871,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8" type="checkbox" id="__nav_5_2_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9" type="checkbox" id="__nav_5_2_9" >
       
-      <label class="md-nav__link" for="__nav_5_2_8">
+      <label class="md-nav__link" for="__nav_5_2_9">
         Advanced Deployments
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Advanced Deployments" data-md-level="3">
-        <label class="md-nav__title" for="__nav_5_2_8">
+        <label class="md-nav__title" for="__nav_5_2_9">
           <span class="md-nav__icon md-icon"></span>
           Advanced Deployments
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1724,19 +1892,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_8_1" type="checkbox" id="__nav_5_2_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2_9_1" type="checkbox" id="__nav_5_2_9_1" >
       
-      <label class="md-nav__link" for="__nav_5_2_8_1">
+      <label class="md-nav__link" for="__nav_5_2_9_1">
         Using Portainer with Reverse Proxies
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Using Portainer with Reverse Proxies" data-md-level="4">
-        <label class="md-nav__title" for="__nav_5_2_8_1">
+        <label class="md-nav__title" for="__nav_5_2_9_1">
           <span class="md-nav__icon md-icon"></span>
           Using Portainer with Reverse Proxies
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1822,7 +1989,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1843,7 +2009,6 @@
           Community Edition
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1866,7 +2031,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1887,7 +2051,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1964,7 +2127,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2003,7 +2165,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2128,7 +2289,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2179,7 +2339,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2256,7 +2415,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2307,7 +2465,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2408,7 +2565,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2484,7 +2640,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2536,7 +2691,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2556,6 +2710,57 @@
     <li class="md-nav__item">
       <a href="../../../v2.0/secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_1_11" type="checkbox" id="__nav_6_1_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_1_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_1_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -2594,7 +2799,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2615,7 +2819,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2692,14 +2895,13 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
   
     <li class="md-nav__item">
       <a href="../../../v2.0/kubernetes/resource_pools/create/" class="md-nav__link">
-        Create a Resource Pool
+        Create a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2723,7 +2925,7 @@
   
     <li class="md-nav__item">
       <a href="../../../v2.0/kubernetes/resource_pools/delete/" class="md-nav__link">
-        Delete a Resource Pool
+        Delete a Namespace/Resource Pool
       </a>
     </li>
   
@@ -2755,7 +2957,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2820,7 +3021,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2872,7 +3072,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2917,7 +3116,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2981,7 +3179,6 @@
           Edge
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3052,7 +3249,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3074,7 +3270,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3095,7 +3290,6 @@
           Stacks
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3172,7 +3366,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3211,7 +3404,6 @@
           Containers
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3336,7 +3528,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3387,7 +3578,6 @@
           Images
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3464,7 +3654,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3515,7 +3704,6 @@
           Services
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3616,7 +3804,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3692,7 +3879,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3744,7 +3930,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3764,6 +3949,57 @@
     <li class="md-nav__item">
       <a href="../../secrets/delete/" class="md-nav__link">
         Delete secrets
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2_1_11" type="checkbox" id="__nav_6_2_1_11" >
+      
+      <label class="md-nav__link" for="__nav_6_2_1_11">
+        Access Control
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Access Control" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_2_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Access Control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/inportainer/" class="md-nav__link">
+        Resources Deployed through Portainer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/outofportainer/" class="md-nav__link">
+        Resources Deployed outside of Portainer
       </a>
     </li>
   
@@ -3802,7 +4038,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3823,7 +4058,6 @@
           Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3900,7 +4134,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -3963,7 +4196,6 @@
           Volumes
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4028,7 +4260,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4080,7 +4311,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4125,7 +4355,6 @@
           ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4190,7 +4419,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4254,7 +4482,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -4311,28 +4538,114 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
-        Upgrading Portainer
+        API
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+      <nav class="md-nav" aria-label="API" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Upgrading Portainer
+          API
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
   
   
     <li class="md-nav__item">
-      <a href="../../../v2.0/upgrade/upgrade/" class="md-nav__link">
+      <a href="../../../api/api-schema/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/api-examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Upgrading Portainer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upgrading Portainer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrading Portainer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../upgrade/" class="md-nav__link">
         Upgrade Path
       </a>
     </li>
   
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../v2.0/upgrade/updBE/" class="md-nav__link">
+        Upgrade CE to Business
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+      
+      <label class="md-nav__link" for="__nav_8_3">
+        Community Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Community Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Community Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -4366,6 +4679,75 @@
       <a href="../../../v2.0/upgrade/updk8s/" class="md-nav__link">
         Upgrading on Kubernetes
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      <label class="md-nav__link" for="__nav_8_4">
+        Business Edition
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Business Edition" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Business Edition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/upddocker/" class="md-nav__link">
+        Upgrading on Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/updswarm/" class="md-nav__link">
+        Upgrading on DockerSwarm
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upgrade/updk8s/" class="md-nav__link">
+        Upgrading on Kubernetes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -4417,19 +4799,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
-      <label class="md-nav__link" for="__nav_10">
+      <label class="md-nav__link" for="__nav_11">
         Older Releases
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Older Releases" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Older Releases
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4439,19 +4820,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_1" type="checkbox" id="__nav_11_1" >
       
-      <label class="md-nav__link" for="__nav_10_1">
+      <label class="md-nav__link" for="__nav_11_1">
         CE 1.23.2
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="CE 1.23.2" data-md-level="2">
-        <label class="md-nav__title" for="__nav_10_1">
+        <label class="md-nav__title" for="__nav_11_1">
           <span class="md-nav__icon md-icon"></span>
           CE 1.23.2
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4596,19 +4976,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_11">
+      <label class="md-nav__link" for="__nav_12">
         Contributing to Portainer
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Contributing to Portainer" data-md-level="1">
-        <label class="md-nav__title" for="__nav_11">
+        <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Contributing to Portainer
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -4669,13 +5048,28 @@
                   </a>
                 
                 
-                <h1><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36h-.01m-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.378.378 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97h-.01m3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53c.05.06.11.1.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24l.13 2.24m-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31h.01m-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62v-.01m1.64.66l.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53.16.67m10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.375.375 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.611 5.611 0 0 1-2.47-3.09l-.2.03a.388.388 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.438.438 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45-.12-.06-.24-.13-.36-.21-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15.11.01.21.05.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02-.13-.04-.25-.09-.36-.15-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11z"/></svg></span> Deploying Portainer Business in Kubernetes</h1>
-<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight Docker containers on a Docker engine. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
-<p>By default, Portainer will expose the UI over the port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over the port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
-<p>To see the requirements, please, visit the page of <a href="/v2.0-be/deploy/requirements/">requirements</a>.</p>
-<h2><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
+                <h1 id="deploying-portainer-business-in-kubernetes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.95 13.5h-.23c-.18.11-.26.32-.18.5l.86 2.11c.83-.53 1.46-1.32 1.79-2.25l-2.23-.36h-.01m-3.45.29a.415.415 0 0 0-.38-.29h-.08l-2.22.37c.33.92.96 1.7 1.79 2.23l.85-2.07V14c.04-.05.04-.14.04-.21m1.83.81a.378.378 0 0 0-.51-.15c-.07.05-.12.08-.15.15h-.01l-1.09 1.97c.78.26 1.62.31 2.43.12.14-.03.29-.07.43-.12l-1.09-1.97h-.01m3.45-4.57L14.1 11.5l.01.03a.37.37 0 0 0-.04.53c.05.06.11.1.18.12l.01.01 2.17.62c.07-.97-.14-1.95-.65-2.78m-3.11.16c.01.21.18.37.39.36.08 0 .15-.02.21-.05h.01l1.83-1.31a4.45 4.45 0 0 0-2.57-1.24l.13 2.24m-1.94.31c.17.11.4.08.52-.09.05-.06.07-.13.08-.21h.01l.12-2.25c-.15.02-.3.05-.46.08-.8.18-1.54.58-2.12 1.16l1.84 1.31h.01m-.99 1.69c.2-.05.32-.26.26-.46 0-.08-.05-.14-.11-.19v-.01L8.21 10c-.52.86-.74 1.84-.63 2.82l2.16-.62v-.01m1.64.66.62.3.62-.3.15-.67-.43-.53h-.69l-.43.53.16.67m10.89 1.32L20.5 6.5c-.09-.42-.37-.76-.74-.94l-7.17-3.43c-.37-.17-.81-.17-1.19 0L4.24 5.56c-.37.18-.65.52-.74.94l-1.77 7.67c-.05.2-.05.4 0 .59.01.06.03.12.05.18.03.09.08.19.13.27.03.04.05.08.09.11l4.95 6.18c.02 0 .05.04.05.06.1.09.19.16.28.22.12.08.26.14.4.17.11.05.23.05.32.05h8.12c.07 0 .14-.03.2-.05.05-.01.1-.03.14-.04.04-.02.07-.03.11-.05.05-.02.1-.05.15-.08.12-.08.23-.18.33-.28l.15-.2 4.8-5.98c.1-.12.17-.25.22-.38.02-.06.04-.12.05-.18.05-.19.05-.4 0-.59m-7.43 2.99c.02.06.04.12.07.17-.04.08-.06.17-.03.26.12.24.23.46.38.68.08.11.16.23.24.34 0 .03.03.08.04.12.12.2.06.46-.15.59s-.47.05-.59-.15c-.01-.03-.02-.05-.03-.08-.02-.03-.04-.09-.06-.09-.05-.15-.09-.28-.12-.41-.09-.25-.17-.49-.3-.72a.375.375 0 0 0-.21-.14l-.08-.16c-1.29.48-2.7.48-3.97-.01l-.1.18c-.07.01-.14.04-.19.09-.14.24-.24.49-.33.77-.03.13-.07.26-.12.4-.02 0-.04.07-.06.1a.43.43 0 0 1-.81-.29c.01-.03.03-.05.04-.08.04-.03.04-.08.04-.11.09-.12.16-.23.24-.35.16-.21.29-.45.39-.69a.54.54 0 0 0-.03-.25l.07-.18a5.611 5.611 0 0 1-2.47-3.09l-.2.03a.388.388 0 0 0-.23-.09c-.27.05-.51.13-.77.22-.11.06-.24.11-.37.15-.03.01-.07.02-.13.03a.438.438 0 0 1-.54-.27c-.07-.23.04-.47.28-.55.02 0 .05-.01.08-.01v-.01h.01l.11-.02c.14-.04.28-.04.41-.04.26 0 .52-.06.77-.12.08-.05.14-.11.19-.19l.19-.05c-.21-1.36.1-2.73.86-3.87l-.14-.12c0-.09-.03-.18-.08-.25-.2-.17-.41-.32-.64-.45-.12-.06-.24-.13-.36-.21-.02-.02-.06-.05-.08-.07l-.01-.01c-.2-.16-.25-.42-.11-.63.09-.1.21-.15.35-.15.11.01.21.05.3.12l.09.07c.1.09.19.2.28.3.18.19.37.37.58.52.08.04.17.05.26.03l.15.11c.75-.8 1.73-1.36 2.8-1.6.25-.06.52-.1.78-.12l.01-.18a.45.45 0 0 0 .14-.23c.01-.26-.01-.52-.05-.77-.03-.13-.05-.27-.06-.41V5.1c-.02-.24.15-.45.39-.48s.44.15.47.38v.22c-.01.14-.03.28-.06.41-.04.25-.06.51-.05.77.02.1.07.17.14.22l.01.19c1.36.12 2.62.73 3.56 1.72l.16-.12c.09.02.18.01.26-.03.21-.15.41-.33.58-.52.09-.1.18-.2.28-.3.03-.02.07-.06.1-.06.17-.18.44-.18.59 0 .19.16.18.43 0 .6 0 .02-.03.04-.06.06a2.495 2.495 0 0 1-.44.28c-.23.13-.45.28-.64.45-.06.07-.09.15-.08.24l-.16.14a5.44 5.44 0 0 1 .88 3.86l.19.05c.04.08.11.14.19.18.25.07.51.11.77.14h.41c.03.03.08.04.12.05.24.03.4.25.37.49-.05.23-.24.4-.48.37-.03-.01-.07-.01-.07-.02v-.01c-.06 0-.1-.01-.14-.02-.13-.04-.25-.09-.36-.15-.26-.1-.5-.17-.77-.21-.09 0-.17 0-.23.08-.07-.01-.13-.02-.19-.03-.41 1.31-1.31 2.41-2.47 3.11z"/></svg></span> Deploying Portainer Business in Kubernetes</h1>
+<p>Portainer is comprised of two elements, the Portainer Server, and the Portainer Agent. Both elements run as lightweight containers on Kubernetes. There are many possible deployment scenarios, however, we have detailed the most common below. Please use the scenario that matches your configuration.</p>
+<p>Regardless of your configuration, you will need:</p>
+<ul>
+<li>A working and up to date Kubernetes cluster</li>
+<li>Access to run Helm or kubectl commands on your cluster</li>
+<li>Cluster Admin rights on your Kubernetes cluster. This is so Portainer can create the necessary <code class="highlight"><span class="no">ServiceAccount</span></code> and <code class="highlight"><span class="no">ClusterRoleBinding</span></code> for it to access the Kubernetes cluster.</li>
+<li>A default StorageClass configured (see below)</li>
+</ul>
+<p>By default, Portainer will expose the UI over port <code class="highlight"><span class="mi">9000</span></code> and expose a TCP tunnel server over port <code class="highlight"><span class="mi">8000</span></code>. The latter is optional and is only required if you plan to use the Edge compute features with Edge agents.</p>
+<p>To learn more about the requirements please visit the <a href="/v2.0-be/deploy/requirements/">requirements</a> page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Agent Versions</p>
+<p>Always match the agent version to Portainer Server version. i.e., while installing or upgrading to Portainer 2.6 make sure all the agents are also version 2.6. </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Access Control &amp; RBAC</p>
+<p>Kubernetes RBAC needs to enabled and working for Access Control to work properly in Portainer.</p>
+</div>
+<h2 id="portainer-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2 12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg></span> Portainer Deployment</h2>
 <hr />
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 11L13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2z"/></svg></span> Pre-Req Note:</h3>
+<h3 id="pre-req-note"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 11 13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2z"/></svg></span> Pre-Req Note:</h3>
 <p>Portainer requires data persistence, and as a result needs at least one storage-class available to use. Portainer will attempt to use the "default" storage class during deployment. If you do NOT have a storage class tagged as "default" the deployment will likely fail.</p>
 <p>You can check if you have a default storage class by running:</p>
 <div class="highlight"><pre><span></span><code>kubectl get sc
@@ -4694,14 +5088,14 @@ Example: <code>kubectl patch storageclass local-path -p '{"metadata": {"annotati
 <p><strong>To deploy Portainer within a Kubernetes cluster, you can either use our HELM chart, or our provided manifests.</strong></p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Deploy using Helm</label><div class="tabbed-content">
 <div class="admonition abstract">
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Ensure you're using at least helm v3.2, which <a href="https://github.com/helm/helm/pull/7648">includes support</a> for the <code>--create-namespace</code> argument.</p>
+<h3 id="portainer-server-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<p>Ensure you're using at least Helm v3.2, which <a href="https://github.com/helm/helm/pull/7648">includes support</a> for the <code>--create-namespace</code> argument.</p>
 <p>First, add the Portainer helm repo running the following:</p>
 <div class="highlight"><pre><span></span><code>helm repo add portainer https://portainer.github.io/k8s/
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>helm repo update
 </code></pre></div>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<p>Based on how you would like to expose the Portainer service, select an option below:</p>
 <div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>helm install --create-namespace -n portainer portainer portainer/portainer <span class="se">\</span>
@@ -4709,18 +5103,19 @@ Example: <code>kubectl patch storageclass local-path -p '{"metadata": {"annotati
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Ingress</label><div class="tabbed-content">
-<p>Using the following command, Poratainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. </p>
+<p>Using the following command, the Portainer service will be assigned a Cluster IP. You should use this with an Ingress, see Chart Configuration Options for Ingress related options. </p>
 <div class="highlight"><pre><span></span><code>helm install --create-namespace -n portainer portainer portainer/portainer <span class="se">\</span>
 --set enterpriseEdition.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
 --set service.type<span class="o">=</span>ClusterIP
 </code></pre></div>
-<details class="hint"><summary>Example Deployment with Nginx Ingress</summary><p>```shell
-helm install --create-namespace -n portainer portainer portainer/portainer \
---set enterpriseEdition.enabled=true \
---set service.type=ClusterIP \
--- set ingress.enabled=true \
--- set ingress.annotations='kubernetes.io/ingress.class: nginx' \
--- set ingress.hosts.host=portainer.example.io</p>
+<details class="hint"><summary>Example Deployment with Nginx Ingress</summary><div class="highlight"><pre><span></span><code>helm install --create-namespace -n portainer portainer portainer/portainer <span class="se">\</span>
+--set enterpriseEdition.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+--set service.type<span class="o">=</span>ClusterIP <span class="se">\</span>
+--set ingress.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+--set ingress.annotations.<span class="s1">&#39;kubernetes\.io/ingress\.class&#39;</span><span class="o">=</span>nginx <span class="se">\</span>
+--set ingress.hosts<span class="o">[</span><span class="m">0</span><span class="o">]</span>.host<span class="o">=</span>portainer.example.io <span class="se">\</span>
+--set ingress.hosts<span class="o">[</span><span class="m">0</span><span class="o">]</span>.paths<span class="o">[</span><span class="m">0</span><span class="o">]</span>.path<span class="o">=</span><span class="s2">&quot;/&quot;</span>
+</code></pre></div>
 </details>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">LoadBalancer</label><div class="tabbed-content">
@@ -4885,15 +5280,15 @@ helm install --create-namespace -n portainer portainer portainer/portainer \
 </tbody>
 </table>
 </details>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
-<p>Helm chart for Agent Only Deployments will be available soon.
-In the mean time please head over to YAML Manifests tab.</p>
+<h3 id="portainer-agent-only-deployment"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<p>Helm charts for Agent Only Deployments will be available soon.
+In the meantime please head over to YAML Manifests tab.</p>
 </div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Deploy using YAML Manifests</label><div class="tabbed-content">
 <div class="admonition abstract">
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<h3 id="portainer-server-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<p>Based on how you would like to expose the Portainer Service, select an option below:</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
@@ -4905,29 +5300,29 @@ In the mean time please head over to YAML Manifests tab.</p>
 </code></pre></div>
 </div>
 </div>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<h3 id="portainer-agent-only-deployment_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
 <p>Choose one of the tabs below based on how you would like to expose the agent.</p>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">NodePort</label><div class="tabbed-content">
 <p>Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport-ee.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">LoadBalancer</label><div class="tabbed-content">
 <p>Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on LoadBalancer assigned IP @ port 9001</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb-ee.yaml
 </code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Deploy on Windows WSL</label><div class="tabbed-content">
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Deploy on Windows WSL / Docker Desktop</label><div class="tabbed-content">
 <div class="admonition abstract">
 <p>You can deploy Portainer in a Kubernetes environment in Windows using Docker Desktop. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This scenario is for testing purpose only.</p>
 </div>
-<h3>Enable Kubernetes in Docker Desktop</h3>
+<h3 id="enable-kubernetes-in-docker-desktop">Enable Kubernetes in Docker Desktop</h3>
 <p>To enable Kubernetes in Docker Desktop, you need to open the dashboard of Docker Desktop. Right click the Docker icon in the system tray and click "dashboard"</p>
 <p><img alt="dashboard" src="../assets/windows10-1.png" /></p>
 <p>Click Settings:</p>
@@ -4938,8 +5333,8 @@ In the mean time please head over to YAML Manifests tab.</p>
 <p><img alt="kubernetes" src="../assets/windows10-3.png" /></p>
 <p>After a few minutes, you will see that Kubernetes is running:</p>
 <p><img alt="kubernetes_running" src="../assets/windows10-4.png" /></p>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
-<p>Based on how you would like expose Portainer Service, Select an option below</p>
+<h3 id="portainer-server-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"/></svg></span> Portainer Server Deployment</h3>
+<p>Based on how you would like expose the Portainer Service, select an option below:</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">NodePort</label><div class="tabbed-content">
 <p>Using the following command, Portainer will be available on port 30777.</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://raw.githubusercontent.com/portainer/k8s/master/deploy/manifests/portainer/portainer-ee.yaml
@@ -4951,16 +5346,16 @@ In the mean time please head over to YAML Manifests tab.</p>
 </code></pre></div>
 </div>
 </div>
-<h3><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
+<h3 id="portainer-agent-only-deployment_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Portainer Agent Only Deployment</h3>
 <p>Choose one of the tabs below based on how you would like to expose the agent.</p>
 <div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">NodePort</label><div class="tabbed-content">
 <p>Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on port 30778.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-nodeport-ee.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">LoadBalancer</label><div class="tabbed-content">
 <p>Run the following command to deploy the Agent in your Kubernetes Cluster, agent will be available on LoadBalancer assigned IP @ port 9001</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -n portainer -f https://downloads.portainer.io/portainer-agent-k8s-lb-ee.yaml
 </code></pre></div>
 </div>
 </div>
@@ -4969,17 +5364,17 @@ In the mean time please head over to YAML Manifests tab.</p>
 </div>
 <hr />
 <details class="tip" open="open"><summary>Regarding Persisting Data</summary><p>The charts/manifests will create a persistent volume for storing Portainer data, using the default StorageClass.</p>
-<p>In some Kubernetes clusters (microk8s), the default Storage Class simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.</p>
-<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the portainer pod to a particular node.</p>
+<p>In some Kubernetes clusters (for example microk8s), the default StorageClass simply creates hostPath volumes, which are not explicitly tied to a particular node. In a multi-node cluster, this can create an issue when the pod is terminated and rescheduled on a different node, "leaving" all the persistent data behind and starting the pod with an "empty" volume.</p>
+<p>While this behaviour is inherently a limitation of using hostPath volumes, a suitable workaround is to use add a nodeSelector to the deployment, which effectively "pins" the Portainer pod to a particular node.</p>
 <p>The nodeSelector can be added in the following ways:</p>
 <ol>
 <li>
-<p>Edit your own values.yaml and set the value of nodeSelector like this:</p>
+<p>Edit your own values.yaml and set the value of nodeSelector:</p>
 <pre><code>nodeSelector: kubernetes.io/hostname: \&lt;YOUR NODE NAME&gt;
 </code></pre>
 </li>
 <li>
-<p>Explicictly set the target node when deploying/updating the helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
+<p>Explicitly set the target node when deploying/updating the Helm chart on the CLI, by including <code>--set nodeSelector.kubernetes.io/hostname=&lt;YOUR NODE NAME&gt;</code></p>
 </li>
 <li>
 <p>If you've deployed Portainer via manifests, without Helm, run the following one-liner to "patch" the deployment, forcing the pod to always be scheduled on the node it's currently running on:</p>
@@ -4989,7 +5384,7 @@ In the mean time please head over to YAML Manifests tab.</p>
 </ol>
 </details>
 <p><br></p>
-<h2><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5V10M5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2H5m0 4v2h9v-2H5z"/></svg></span> Notes</h2>
+<h2 id="notes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5V10M5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 9v2h14v-2H5m0 4v2h9v-2H5z"/></svg></span> Notes</h2>
 <p><a href="https://github.com/portainer/portainer-docs/blob/master/contributing.md" target="_blank">Contribute to these docs</a></p>
 <!-- {{ snippet('https://github.com/portainer/k8s.git', 'charts/portainer/README.md', '# Chart Configuration') }} -->
                 
@@ -5004,6 +5399,7 @@ In the mean time please head over to YAML Manifests tab.</p>
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -5011,7 +5407,8 @@ In the mean time please head over to YAML Manifests tab.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../beinstallswarm/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="../beinstallswarm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker Swarm" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -5026,13 +5423,14 @@ In the mean time please head over to YAML Manifests tab.</p>
         </a>
       
       
-        <a href="../ssl/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="../../../v2.0/deploy/edgeagent/" class="md-footer__link md-footer__link--next" aria-label="Next: Edge Agent" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Using SSL with Portainer
+              Edge Agent
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -5050,6 +5448,7 @@ In the mean time please head over to YAML Manifests tab.</p>
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -5109,10 +5508,10 @@ In the mean time please head over to YAML Manifests tab.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.4e3fea51.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
